@@ -67,22 +67,3 @@ class HomeView extends StatelessWidget {
   Image appBarIconSection() => Image.asset("assets/images/avatar.png");
 }
 
-class FlavoursCardSection extends StatelessWidget {
-  const FlavoursCardSection({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-            child: Image.asset(
-          "assets/images/lemon.png",
-          fit: BoxFit.contain,
-        )),
-        Expanded(child: FlavoursCardRightSection())
-      ],
-    );
-  }
-}
