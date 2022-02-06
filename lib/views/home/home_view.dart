@@ -8,11 +8,14 @@ import '../../core/components/appbar/appbar_title.dart';
 import 'package:kartal/kartal.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
+import '../../core/components/title/solo_title.dart';
+
 class HomeView extends StatelessWidget {
   final String appBarTitle = "Hey Emma";
   final String appBarSubtitle = "What flavor do you like to eat?";
   final String search = "Search";
   final String topTitle = "Top Flavours";
+  final String popularTitle = "Popular Ice Cream";
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +26,23 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              context.emptySizedHeightBoxLow3x,
+              context.emptySizedHeightBoxLow,
               Expanded(flex: 1, child: SearchBar(label: search)),
+              context.emptySizedHeightBoxLow,
+              Expanded(flex: 1, child: SoloTitle(title: topTitle)),
+              Expanded(
+                  flex: 3,
+                  child: Card(
+                      color: firstDate,
+                      child: MyColumn(
+                        child: FlavoursCardSection(),
+                      ))),
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: buidTopFlavoursSection(context)),
+              Expanded(flex: 1, child: SoloTitle(title: popularTitle)),
+              context.emptySizedHeightBoxLow3x,
+              // Expanded(child: ListView.builder(itemBuilder: itemBuilder))
               Expanded(
-                flex: 3,
-                child: Card(
-                  color: firstDate,
-                  child: MyColumn(
-                    child: FlavoursCardSection(),
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 8,
+                flex: 7,
                 child: Placeholder(),
               )
             ],
@@ -46,11 +51,6 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
-
-  Text buidTopFlavoursSection(BuildContext context) => Text(
-        topTitle,
-        style: context.textTheme.headline6,
-      );
 
   AppBar buildAppBar() {
     return AppBar(
@@ -66,4 +66,3 @@ class HomeView extends StatelessWidget {
 
   Image appBarIconSection() => Image.asset("assets/images/avatar.png");
 }
-
