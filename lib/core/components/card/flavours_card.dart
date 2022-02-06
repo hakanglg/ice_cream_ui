@@ -42,7 +42,7 @@ class FlavoursCardSection extends StatelessWidget {
 
   Image buildCardImageSection() {
     return Image.asset(
-      "assets/images/lemon.png",
+      "assets/images/raspberry.png",
       fit: BoxFit.contain,
     );
   }
@@ -74,7 +74,7 @@ Icon buildPriceIcon() {
 
 Text buildPriceText(BuildContext context) {
   return Text(
-    "14,60",
+    "14.60",
     style: context.textTheme.bodyText1,
   );
 }

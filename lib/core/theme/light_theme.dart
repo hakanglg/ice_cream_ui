@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_ui/core/constants/colors.dart';
+import '../constants/colors.dart';
 
 ThemeData lightTheme = ThemeData(
   fontFamily: 'Roboto',
