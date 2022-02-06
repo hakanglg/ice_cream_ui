@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../constants/colors.dart';
+import '../column/column.dart';
 
 class FlavoursCardSection extends StatelessWidget {
   const FlavoursCardSection({
@@ -11,12 +12,18 @@ class FlavoursCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(child: buildCardImageSection()),
-        Expanded(child: buildCardRightSection(context))
-      ],
-    );
+    return Card(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+        color: firstDate,
+        child: MyColumn(
+          child: Row(
+            children: [
+              Expanded(child: buildCardImageSection()),
+              Expanded(child: buildCardRightSection(context))
+            ],
+          ),
+        ));
   }
 
   Column buildCardRightSection(BuildContext context) {

@@ -26,23 +26,17 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              context.emptySizedHeightBoxLow,
+              context.emptySizedHeightBoxLow3x,
               Expanded(flex: 1, child: SearchBar(label: search)),
-              context.emptySizedHeightBoxLow,
+              context.emptySizedHeightBoxLow3x,
               Expanded(flex: 1, child: SoloTitle(title: topTitle)),
-              Expanded(
-                  flex: 3,
-                  child: Card(
-                      color: firstDate,
-                      child: MyColumn(
-                        child: FlavoursCardSection(),
-                      ))),
+              Expanded(flex: 3, child: FlavoursCardSection()),
               context.emptySizedHeightBoxLow3x,
               Expanded(flex: 1, child: SoloTitle(title: popularTitle)),
               context.emptySizedHeightBoxLow3x,
               // Expanded(child: ListView.builder(itemBuilder: itemBuilder))
               Expanded(
-                flex: 7,
+                flex: 5,
                 child: Placeholder(),
               )
             ],
