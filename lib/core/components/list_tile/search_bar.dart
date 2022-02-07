@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../constants/colors.dart';
+import '../../constants/strings.dart';
 
 class SearchBar extends StatelessWidget {
   final String? label;
@@ -31,6 +32,8 @@ class SearchBar extends StatelessWidget {
 
   TextField buildTextFieldLabel(BuildContext context) {
     return TextField(
+      scrollPadding:
+          EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       decoration: InputDecoration(
         hintText: label,
         hintStyle: context.textTheme.subtitle2,
@@ -44,7 +47,6 @@ class BuildFilterFAB extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final String filter = "Filter";
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton.extended(

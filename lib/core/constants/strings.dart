@@ -5,3 +5,4 @@ final String search = "Search";
 final String topTitle = "Top Flavours";
 final String popularTitle = "Popular Ice Cream";
 final String itemTitle = "Top Item";
+final String filter = "Filter";

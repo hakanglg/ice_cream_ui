@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../core/components/appbar/appbar_title.dart';
-
 import '../../core/components/card/flavour_card.dart';
 import '../../core/components/card/mini_card.dart';
 import '../../core/components/card/top_section_card.dart';

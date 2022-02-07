@@ -31,39 +31,37 @@ class MiniCardsListView extends StatelessWidget {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: products[index].lightColor),
-                  height: context.dynamicHeight(1),
-                  width: context.dynamicWidth(0.35),
-                  child: Hero(
-                    tag: products[index].id,
-                    child: ListTile(
-                      dense: true,
-                      contentPadding:
-                          const EdgeInsets.only(left: 0.0, right: 0.0),
-                      // visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-
-                      leading: buildImageSection(index),
-                      title: buildFlavorTextSection(index, context),
-                    ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: products[index].lightColor,
+                  ),
+                  width: context.dynamicWidth(0.3),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          flex: 1, child: buildImageSection(index, context)),
+                      Expanded(
+                          flex: 2,
+                          child: buildFlavorTextSection(index, context))
+                    ],
                   ),
                 ),
               ),
             ));
   }
 
-  Container buildImageSection(int index) {
+  Container buildImageSection(int index, BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(5),
         color: products[index].color,
       ),
-      height: 50,
-      width: 50,
+      width: context.dynamicHeight(1),
       child: MyColumn(
-        child: Image.asset(
-          products[index].image,
-          fit: BoxFit.cover,
+        child: Center(
+          child: Image.asset(
+            products[index].image,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
@@ -71,9 +69,12 @@ class MiniCardsListView extends StatelessWidget {
 
   Container buildFlavorTextSection(int index, BuildContext context) {
     return Container(
-      child: Text(
-        products[index].flavor,
-        style: context.textTheme.bodyText1,
+      height: context.dynamicHeight(1),
+      child: Center(
+        child: Text(
+          products[index].flavor,
+          style: context.textTheme.bodyText1,
+        ),
       ),
     );
   }
