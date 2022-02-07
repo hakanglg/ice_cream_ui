@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 final Color prunusAvium = Color(0xffe84393);
 final Color chiGong = Color(0xffd63031);
 final Color orangeVilee = Color(0xffe17055);
-final Color brightYarrow = Color.fromARGB(255, 189, 144, 60);
+final Color brightYarrow = Color(0xfffdcb6e);
 final Color picoPink = Color(0xfffd79a8);
 final Color pinkGlamour = Color(0xffff7675);
 final Color cityLights = Color(0xffdfe6e9);

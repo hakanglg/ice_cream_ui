@@ -11,7 +11,7 @@ class CircularProgress extends StatefulWidget {
 class _CircularProgressState extends State<CircularProgress> {
   bool isLoading = false;
 
-  Future<void> getUsers(BuildContext context) async {
+  Future<void> getUsers(BuildContext context) async { // 1 SECONDS CIRCULAR PROGRESS IND.
     setState(() {
       isLoading = true;
     });

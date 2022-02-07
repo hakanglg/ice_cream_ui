@@ -21,23 +21,23 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: buildAppBar(),
-        body: MyRow(
+        appBar: buildAppBar(), // APP BAR
+        body: MyRow( // HOME VIEW
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SearchBar(label: search)),
+              Expanded(flex: 1, child: SearchBar(label: search)), // SEARCH BAR
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SoloTitle(title: topTitle)),
-              Expanded(flex: 3, child: FlavourCard()),
+              Expanded(flex: 1, child: SoloTitle(title: topTitle)), // TOP FLAVOURS TEXT
+              Expanded(flex: 3, child: FlavourCard()), // TOP FLAVOURS CARDS LVB
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SoloTitle(title: popularTitle)),
+              Expanded(flex: 1, child: SoloTitle(title: popularTitle)), // POPULAR ICE CREAM TEXT
               // context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: MiniCardsListView()),
+              Expanded(flex: 1, child: MiniCardsListView()), // POPULAR ICE CREAM CARDS LVB
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SoloTitle(title: itemTitle)),
-              Expanded(flex: 4, child: TopSectionCards()),
+              Expanded(flex: 1, child: SoloTitle(title: itemTitle)), // TOP ITEM TEXT
+              Expanded(flex: 4, child: TopSectionCards()), //  TOP ITEM CARDS LVB
               context.emptySizedHeightBoxLow3x,
             ],
           ),

@@ -18,16 +18,17 @@ class DetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: product!.lightColor,
-      appBar: buildAppBar(context),
+      appBar: buildAppBar(context), //  APP BAR
       body: Column(
+        //  BODY
         children: [
           Expanded(
             flex: 10,
-            child: buildImageSection(product: product),
+            child: buildImageSection(product: product), //  IMAGE SECTION
           ),
           Expanded(
             flex: 10,
-            child: buildDescriptionSection(context),
+            child: buildDescriptionSection(context), //  DESCRIPTION SECTION
           )
         ],
       ),
