@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
@@ -16,7 +17,7 @@ class PriceIconAndText extends StatelessWidget {
   }
 
   Icon buildIcon() {
-    return Icon(
+    return const Icon(
       FontAwesome.dollar,
       color: prunusAvium,
       size: 13,

@@ -5,9 +5,9 @@ import '../constants/colors.dart';
 ThemeData lightTheme = ThemeData(
   scaffoldBackgroundColor: Colors.white,
   fontFamily: 'Roboto',
-  buttonTheme: ButtonThemeData(buttonColor: prunusAvium),
+  buttonTheme: const ButtonThemeData(buttonColor: prunusAvium),
   floatingActionButtonTheme:
-      FloatingActionButtonThemeData(backgroundColor: prunusAvium),
+      const FloatingActionButtonThemeData(backgroundColor: prunusAvium),
   inputDecorationTheme: const InputDecorationTheme(
     border: InputBorder.none,
   ),

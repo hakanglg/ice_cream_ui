@@ -68,6 +68,7 @@ class MiniCardsListView extends StatelessWidget {
   }
 
   Container buildFlavorTextSection(int index, BuildContext context) {
+    // ignore: sized_box_for_whitespace
     return Container(
       height: context.dynamicHeight(1),
       child: Center(

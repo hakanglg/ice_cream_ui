@@ -10,7 +10,7 @@ abstract class PriceAndButton extends StatelessWidget {
 
   const PriceAndButton({Key? key, this.product}) : super(key: key);
 
-  @override
+  // ignore: non_constant_identifier_names
   Widget(BuildContext context, int index) {
     return Row(
       children: [

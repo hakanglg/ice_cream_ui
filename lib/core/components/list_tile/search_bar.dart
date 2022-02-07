@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
@@ -20,9 +21,9 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: cityLights,
-            borderRadius: const BorderRadius.all(Radius.circular(15))),
+            borderRadius: BorderRadius.all(Radius.circular(15))),
         child: ListTile(
           leading: icon,
           title: buildTextFieldLabel(context),
@@ -63,5 +64,5 @@ class BuildFilterFAB extends StatelessWidget {
 
   Icon buildFabIconSection() => const Icon(MaterialIcons.sort);
 
-  Text buildFabTextSection() => Text(filter);
+  Text buildFabTextSection() => const Text(filter);
 }

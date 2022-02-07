@@ -26,17 +26,17 @@ class HomeView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SearchBar(label: search)), // SEARCH BAR
+              const Expanded(flex: 1, child: SearchBar(label: search)), // SEARCH BAR
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SoloTitle(title: topTitle)), // TOP FLAVOURS TEXT
-              Expanded(flex: 3, child: FlavourCard()), // TOP FLAVOURS CARDS LVB
+              const Expanded(flex: 1, child: SoloTitle(title: topTitle)), // TOP FLAVOURS TEXT
+              const Expanded(flex: 3, child: FlavourCard()), // TOP FLAVOURS CARDS LVB
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SoloTitle(title: popularTitle)), // POPULAR ICE CREAM TEXT
+              const Expanded(flex: 1, child: SoloTitle(title: popularTitle)), // POPULAR ICE CREAM TEXT
               // context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: MiniCardsListView()), // POPULAR ICE CREAM CARDS LVB
+              const Expanded(flex: 1, child: MiniCardsListView()), // POPULAR ICE CREAM CARDS LVB
               context.emptySizedHeightBoxLow3x,
-              Expanded(flex: 1, child: SoloTitle(title: itemTitle)), // TOP ITEM TEXT
-              Expanded(flex: 4, child: TopSectionCards()), //  TOP ITEM CARDS LVB
+              const Expanded(flex: 1, child: SoloTitle(title: itemTitle)), // TOP ITEM TEXT
+              const Expanded(flex: 4, child: TopSectionCards()), //  TOP ITEM CARDS LVB
               context.emptySizedHeightBoxLow3x,
             ],
           ),
@@ -47,7 +47,7 @@ class HomeView extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      title: AppBarTitleSection(
+      title: const AppBarTitleSection(
         title: appBarTitle,
         subtitle: appBarSubtitle,
       ),

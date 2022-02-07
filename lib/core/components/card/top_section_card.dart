@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
@@ -9,6 +10,8 @@ import '../column/column.dart';
 import '../row/row.dart';
 
 class TopSectionCards extends StatelessWidget {
+  const TopSectionCards({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -49,7 +52,7 @@ class TopSectionCards extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Icon(
+                          const Icon(
                             FontAwesome.dollar,
                             color: prunusAvium,
                             size: 13,

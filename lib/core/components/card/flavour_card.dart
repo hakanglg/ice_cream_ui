@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_icons/flutter_icons.dart';
 import '../../../views/detail/detail_view.dart';
 import '../../../views/home/home_view_model.dart';
@@ -7,7 +8,6 @@ import 'package:kartal/kartal.dart';
 import '../../constants/colors.dart';
 import '../column/column.dart';
 import '../row/row.dart';
-
 
 class FlavourCard extends StatelessWidget {
   final Product? product;
@@ -80,7 +80,7 @@ class FlavourCard extends StatelessWidget {
   }
 
   Icon buildPriceIcon() {
-    return Icon(
+    return const Icon(
       FontAwesome.dollar,
       color: prunusAvium,
       size: 13,
@@ -124,7 +124,7 @@ class FlavourCard extends StatelessWidget {
     return Container(
       padding: context.paddingLow,
       decoration:
-          ShapeDecoration(shape: const StadiumBorder(), color: sourLemon),
+          const ShapeDecoration(shape: StadiumBorder(), color: sourLemon),
       child: Text("${products[index].total} KG",
           style: context.textTheme.bodyText1),
     );
@@ -133,6 +133,13 @@ class FlavourCard extends StatelessWidget {
   Row buildStartAndPointSection(int index, BuildContext context) {
     return Row(
       children: [buildStarIcon(), buildStartPointText(index, context)],
+    );
+  }
+
+  Icon buildStarIcon() {
+    return const Icon(
+      Icons.star,
+      color: sourLemon,
     );
   }
 
@@ -149,16 +156,5 @@ class FlavourCard extends StatelessWidget {
   }
 }
 
-class buildStarIcon extends StatelessWidget {
-  const buildStarIcon({
-    Key? key,
-  }) : super(key: key);
+// ignore: camel_case_types
 
-  @override
-  Widget build(BuildContext context) {
-    return Icon(
-      Icons.star,
-      color: sourLemon,
-    );
-  }
-}

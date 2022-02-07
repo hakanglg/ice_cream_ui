@@ -4,6 +4,8 @@ import 'package:kartal/kartal.dart';
 import '../../../views/home/home_view.dart';
 
 class CircularProgress extends StatefulWidget {
+  const CircularProgress({Key? key}) : super(key: key);
+
   @override
   State<CircularProgress> createState() => _CircularProgressState();
 }

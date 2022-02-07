@@ -9,11 +9,11 @@ class MyRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Spacer(
+        const Spacer(
           flex: 1,
         ),
         Expanded(flex: 19, child: child),
-        Spacer(
+        const Spacer(
           flex: 1,
         )
       ],

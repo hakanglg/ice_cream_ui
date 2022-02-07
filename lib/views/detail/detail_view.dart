@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
@@ -24,7 +25,7 @@ class DetailView extends StatelessWidget {
         children: [
           Expanded(
             flex: 10,
-            child: buildImageSection(product: product), //  IMAGE SECTION
+            child: BuildImageSection(product: product), //  IMAGE SECTION
           ),
           Expanded(
             flex: 10,
@@ -38,7 +39,7 @@ class DetailView extends StatelessWidget {
   Container buildDescriptionSection(BuildContext context) {
     return Container(
       width: context.dynamicWidth(1),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(30), topLeft: Radius.circular(30)),
@@ -74,15 +75,15 @@ class DetailView extends StatelessWidget {
   Text buildDescriptionTextSection(BuildContext context) {
     return Text(
       product!.description,
-      style: context.textTheme.bodyText1!
-          .copyWith(color: Color.fromARGB(255, 117, 116, 116), fontSize: 15),
+      style: context.textTheme.bodyText1!.copyWith(
+          color: const Color.fromARGB(255, 117, 116, 116), fontSize: 15),
     );
   }
 
   Container buildAddCardButtonContainer() {
     return Container(
       decoration: BoxDecoration(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
@@ -102,7 +103,7 @@ class DetailView extends StatelessWidget {
       minWidth: double.infinity,
       // color: product!.color,
       textColor: Colors.white,
-      child: new Text(addToCard),
+      child: const Text(addToCard),
       onPressed: () => {},
       splashColor: product!.lightColor,
     );
@@ -111,7 +112,7 @@ class DetailView extends StatelessWidget {
   Row buildPriceAndTextSection(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           FontAwesome.dollar,
           color: prunusAvium,
           size: 30,
@@ -135,7 +136,7 @@ class DetailView extends StatelessWidget {
       spacing: 5,
       children: [
         buildTotalIconButton(
-            Icon(
+            const Icon(
               Icons.add,
               color: Colors.white,
             ),
@@ -143,7 +144,7 @@ class DetailView extends StatelessWidget {
         Text("${product!.total.toString()} KG",
             style: context.textTheme.bodyText1),
         buildTotalIconButton(
-            Icon(
+            const Icon(
               Icons.remove,
               color: Colors.white,
             ),
@@ -157,7 +158,7 @@ class DetailView extends StatelessWidget {
       onTap: () => function,
       child: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
@@ -193,7 +194,7 @@ class DetailView extends StatelessWidget {
   }
 
   Icon buildActiveStarIcon() {
-    return Icon(
+    return const Icon(
       Icons.star,
       color: sourLemon,
       size: 20,
@@ -201,7 +202,7 @@ class DetailView extends StatelessWidget {
   }
 
   Icon buildDeactiveStarIcon() {
-    return Icon(
+    return const Icon(
       Icons.star,
       color: cloudGrey,
       size: 20,
@@ -254,8 +255,8 @@ class DetailView extends StatelessWidget {
   }
 }
 
-class buildImageSection extends StatelessWidget {
-  const buildImageSection({
+class BuildImageSection extends StatelessWidget {
+  const BuildImageSection({
     Key? key,
     required this.product,
   }) : super(key: key);
@@ -266,7 +267,7 @@ class buildImageSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: context.dynamicWidth(1),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30)),
         // color: product!.lightColor,
       ),
