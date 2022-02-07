@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'core/components/progress/circular_progress.dart';
 import 'core/theme/light_theme.dart';
 import 'views/home/home_view.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flavors App',
-      home: HomeView(),
+      home: CircularProgress(),
       theme: lightTheme,
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'price_icon_text.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../../views/home/home_view_model.dart';
 import '../card/flavours_card.dart';
+import 'price_icon_text.dart';
 
 abstract class PriceAndButton extends StatelessWidget {
   final Product? product;

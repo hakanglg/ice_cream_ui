@@ -13,11 +13,7 @@ class TopSectionCards extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemCount: products.length,
-        itemBuilder: (context, index) => ListView.builder(
-            shrinkWrap: true,
-            scrollDirection: Axis.horizontal,
-            itemCount: products.length,
-            itemBuilder: (context, index) => buildMyCard(context, index)));
+        itemBuilder: (context, index) => buildMyCard(context, index));
   }
 
   Padding buildMyCard(BuildContext context, int index) {
