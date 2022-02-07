@@ -1,5 +1,3 @@
-
-
 final String addToCard = "Add to Card";
 final String appBarTitle = "Hey Emma";
 final String appBarSubtitle = "What flavor do you like to eat?";

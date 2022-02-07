@@ -20,11 +20,11 @@ class SearchBar extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             color: cityLights,
-            borderRadius: BorderRadius.all(Radius.circular(15))),
+            borderRadius: const BorderRadius.all(Radius.circular(15))),
         child: ListTile(
           leading: icon,
           title: buildTextFieldLabel(context),
-          trailing: BuildFilterFAB(),
+          trailing: const BuildFilterFAB(),
         ));
   }
 
@@ -58,7 +58,7 @@ class BuildFilterFAB extends StatelessWidget {
         children: [buildFabIconSection(), buildFabTextSection()]);
   }
 
-  Icon buildFabIconSection() => Icon(MaterialIcons.sort);
+  Icon buildFabIconSection() => const Icon(MaterialIcons.sort);
 
   Text buildFabTextSection() => Text(filter);
 }

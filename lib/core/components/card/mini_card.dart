@@ -39,7 +39,8 @@ class MiniCardsListView extends StatelessWidget {
                     tag: products[index].id,
                     child: ListTile(
                       dense: true,
-                      contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
+                      contentPadding:
+                          const EdgeInsets.only(left: 0.0, right: 0.0),
                       // visualDensity: VisualDensity(horizontal: -4, vertical: -4),
 
                       leading: buildImageSection(index),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../views/detail/detail_view.dart';
+
 import '../../../views/home/home_view.dart';
 import 'package:kartal/kartal.dart';
 
@@ -23,7 +23,6 @@ class _CircularProgressState extends State<CircularProgress> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getUsers(context);
   }
@@ -32,7 +31,7 @@ class _CircularProgressState extends State<CircularProgress> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: isLoading
-            ? Center(child: CircularProgressIndicator())
-            : HomeView());
+            ? const Center(child: CircularProgressIndicator())
+            : const HomeView());
   }
 }

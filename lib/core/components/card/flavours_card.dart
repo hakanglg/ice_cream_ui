@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+
 import 'package:kartal/kartal.dart';
 
 import '../../constants/colors.dart';
@@ -83,7 +84,7 @@ FloatingActionButton buildAddFAB() {
   return FloatingActionButton.small(
     heroTag: UniqueKey(),
     onPressed: () {},
-    child: Icon(Icons.add),
+    child: const Icon(Icons.add),
   );
 }
 
@@ -108,7 +109,7 @@ Row buildWeightAndStarPointSection(BuildContext context) {
 Container buildTotalSection(BuildContext context) {
   return Container(
     padding: context.paddingLow,
-    decoration: ShapeDecoration(shape: StadiumBorder(), color: sourLemon),
+    decoration: ShapeDecoration(shape: const StadiumBorder(), color: sourLemon),
     child: Text("1 KG", style: context.textTheme.bodyText1),
   );
 }
