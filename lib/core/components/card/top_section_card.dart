@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../../views/detail/detail_view.dart';
 import '../../../views/home/home_view_model.dart';
+import '../../constants/colors.dart';
 import '../column/column.dart';
 import '../row/row.dart';
-import 'flavours_card.dart';
 
 class TopSectionCards extends StatelessWidget {
   @override
@@ -44,7 +45,29 @@ class TopSectionCards extends StatelessWidget {
                   buildImage(index),
                   buildTitleText(index, context),
                   buildFlavorText(index, context),
-                  buildPriceAndFABSection(context)
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            FontAwesome.dollar,
+                            color: prunusAvium,
+                            size: 13,
+                          ),
+                          Text(
+                            products[index].price.toString(),
+                            style: context.textTheme.bodyText1,
+                          )
+                        ],
+                      ),
+                      context.emptySizedWidthBoxHigh,
+                      FloatingActionButton.small(
+                        heroTag: UniqueKey(),
+                        onPressed: () {},
+                        child: const Icon(Icons.add),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kartal/kartal.dart';
 
 import '../../../views/home/home_view.dart';
-import 'package:kartal/kartal.dart';
 
 class CircularProgress extends StatefulWidget {
   @override

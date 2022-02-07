@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../core/components/appbar/appbar_title.dart';
-import '../../core/components/card/flavours_card.dart';
+
+import '../../core/components/card/flavour_card.dart';
 import '../../core/components/card/mini_card.dart';
 import '../../core/components/card/top_section_card.dart';
 import '../../core/components/list_tile/search_bar.dart';
@@ -29,7 +30,7 @@ class HomeView extends StatelessWidget {
               Expanded(flex: 1, child: SearchBar(label: search)),
               context.emptySizedHeightBoxLow3x,
               Expanded(flex: 1, child: SoloTitle(title: topTitle)),
-              Expanded(flex: 3, child: FlavoursCardSection()),
+              Expanded(flex: 3, child: FlavourCard()),
               context.emptySizedHeightBoxLow3x,
               Expanded(flex: 1, child: SoloTitle(title: popularTitle)),
               // context.emptySizedHeightBoxLow3x,

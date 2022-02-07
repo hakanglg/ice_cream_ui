@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_icons/flutter_icons.dart';
-import '../../core/components/card/flavours_card.dart';
-import '../../core/components/column/column.dart';
-import '../../core/components/row/row.dart';
-import '../home/home_view_model.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../core/components/column/column.dart';
+import '../../core/components/row/row.dart';
 import '../../core/components/title/solo_title.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/strings.dart';
+import '../home/home_view_model.dart';
 
 class DetailView extends StatelessWidget {
   final Product? product;
@@ -111,7 +109,14 @@ class DetailView extends StatelessWidget {
 
   Row buildPriceAndTextSection(BuildContext context) {
     return Row(
-      children: [buildPriceIcon(30), buildPriceText(context)],
+      children: [
+        Icon(
+          FontAwesome.dollar,
+          color: prunusAvium,
+          size: 30,
+        ),
+        buildPriceText(context)
+      ],
     );
   }
 
