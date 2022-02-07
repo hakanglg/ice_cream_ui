@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../../views/detail/detail_view.dart';
 import '../../../views/home/home_view_model.dart';
 import '../column/column.dart';
 import '../row/row.dart';
@@ -20,21 +21,32 @@ class TopSectionCards extends StatelessWidget {
     return Padding(
       padding:
           EdgeInsets.only(right: MediaQuery.of(context).size.height * 0.02),
-      child: Container(
-        width: context.dynamicWidth(0.43),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: products[index].lightColor),
-        child: MyColumn(
-          child: MyRow(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                buildImage(index),
-                buildTitleText(index, context),
-                buildFlavorText(index, context),
-                buildPriceAndFABSection(context)
-              ],
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DetailView(
+                  product: products[index],
+                ),
+              ));
+        },
+        child: Container(
+          width: context.dynamicWidth(0.43),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: products[index].lightColor),
+          child: MyColumn(
+            child: MyRow(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  buildImage(index),
+                  buildTitleText(index, context),
+                  buildFlavorText(index, context),
+                  buildPriceAndFABSection(context)
+                ],
+              ),
             ),
           ),
         ),

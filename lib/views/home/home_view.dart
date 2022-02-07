@@ -8,16 +8,12 @@ import '../../core/components/card/top_section_card.dart';
 import '../../core/components/list_tile/search_bar.dart';
 import '../../core/components/row/row.dart';
 import '../../core/components/title/solo_title.dart';
+import '../../core/constants/strings.dart';
 import 'home_view_model.dart';
 
 class HomeView extends StatelessWidget {
   final Product? product;
-  final String appBarTitle = "Hey Emma";
-  final String appBarSubtitle = "What flavor do you like to eat?";
-  final String search = "Search";
-  final String topTitle = "Top Flavours";
-  final String popularTitle = "Popular Ice Cream";
-  final String itemTitle = "Top Item";
+
   const HomeView({Key? key, this.product}) : super(key: key);
 
   @override

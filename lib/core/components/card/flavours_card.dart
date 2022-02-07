@@ -60,15 +60,15 @@ Row buildPriceAndFABSection(BuildContext context) {
 
 Row buildPriceIconAndText(BuildContext context) {
   return Row(
-    children: [buildPriceIcon(), buildPriceText(context)],
+    children: [buildPriceIcon(13), buildPriceText(context)],
   );
 }
 
-Icon buildPriceIcon() {
+Icon buildPriceIcon(double size) {
   return Icon(
     FontAwesome.dollar,
     color: prunusAvium,
-    size: 13,
+    size: size,
   );
 }
 
@@ -81,6 +81,7 @@ Text buildPriceText(BuildContext context) {
 
 FloatingActionButton buildAddFAB() {
   return FloatingActionButton.small(
+    heroTag: UniqueKey(),
     onPressed: () {},
     child: Icon(Icons.add),
   );

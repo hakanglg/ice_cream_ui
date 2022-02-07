@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ice_cream_ui/views/detail/detail_view.dart';
 import '../../../views/home/home_view.dart';
 import 'package:kartal/kartal.dart';
 

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 
 ThemeData lightTheme = ThemeData(
+  scaffoldBackgroundColor: Colors.white,
+
   fontFamily: 'Roboto',
   buttonTheme: ButtonThemeData(buttonColor: prunusAvium),
   floatingActionButtonTheme:

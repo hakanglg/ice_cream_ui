@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'product/components/progress/circular_progress.dart';
 
-import 'core/components/progress/circular_progress.dart';
 import 'core/theme/light_theme.dart';
-import 'views/home/home_view.dart';
 
 void main() => runApp(MyApp());
 
