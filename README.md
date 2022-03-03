@@ -1,4 +1,4 @@
-**ice_cream_ui for M.A.R.S Technology**
+**Ice Cream UI for M.A.R.S Technology**
 
 
 
